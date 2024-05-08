@@ -30,7 +30,8 @@ const Countries = () => {
     useEffect(() => {
         fetch(API_URL)
         .then((response) => response.json())
-        .then((data) => setCountries(data));
+        .then((data) => setCountries(data))
+        .catch((err) => console.log(err));
     },[])
     
     return (
